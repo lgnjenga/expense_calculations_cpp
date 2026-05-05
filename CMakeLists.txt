@@ -22,6 +22,7 @@ target_compile_options(expense_stats PRIVATE
 # Unit test executable (always built, simple self-test)
 add_executable(run_tests
     src/stats_calculator.cpp
+    tests/test_stats.cpp
 )
 
 # Optional: create a custom target for cleaning
