@@ -10,6 +10,7 @@ include_directories(include)
 # Main executable
 add_executable(expense_stats
     src/main.cpp
+    src/stats_calculator.cpp
 )
 
 # Compiler options
@@ -18,6 +19,10 @@ target_compile_options(expense_stats PRIVATE
     $<$<CONFIG:Debug>:-g>
 )
 
+# Unit test executable (always built, simple self-test)
+add_executable(run_tests
+    src/stats_calculator.cpp
+)
 
 # Optional: create a custom target for cleaning
 add_custom_target(clean-all
